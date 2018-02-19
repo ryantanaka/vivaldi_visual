@@ -45,7 +45,7 @@ def animate(i):
 
     # output what is currently being plotted
     pp = pprint.PrettyPrinter(indent=2) 
-    print("\n\ncoordinate table at snapshot: {}".format(size - len(data))
+    print("\ncoordinate table at snapshot: {}".format(size - len(data)))
     print("---------------------------------------")
 
     pp.pprint(current_run)
@@ -62,5 +62,5 @@ def animate(i):
 
 
 # run the animation, refreshes at interval milliseconds, runs for frames, and stops on the last frame
-ani = animation.FuncAnimation(fig, animate, interval=1000, frames=len(data)-1, repeat=False)
+ani = animation.FuncAnimation(fig, animate, interval=2000, frames=len(data)-1, repeat=False)
 plt.show()
