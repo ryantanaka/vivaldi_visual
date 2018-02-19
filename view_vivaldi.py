@@ -54,7 +54,7 @@ def animate(i):
 
     # set up the labels
     for host, x, y in zip(hostnames, xvals, yvals):
-        plt.annotate(host, xy=(x,y), xytext=(0,0),
+        plt.annotate(host, xy=(x,y), xytext=(10,10),
                 textcoords='offset points', ha='right', va='bottom',
                 bbox=dict(boxstyle='round,pad=0.5', fc='grey', alpha=0.5))
 
