@@ -26,6 +26,9 @@ for block in raw_data:
 # reverse so i can pop off in the right order
 data.reverse()
 
+# hold the number of updates
+size = len(data)
+
 # plotting 
 fig = plt.figure()
 ax1 = fig.add_subplot(1,1,1)
@@ -33,14 +36,17 @@ plt.subplots_adjust(bottom=0.1)
 
 colors = [i for i in range(len(data[0]))]
 
+print(" Plotting {} Snapshots".format(len(data)))
+print("-------------------------")
+
 def animate(i):
     ax1.clear()
     current_run = data.pop()
 
     # output what is currently being plotted
     pp = pprint.PrettyPrinter(indent=2) 
-    print("\ncoordinate table current state")
-    print("------------------------------")
+    print("\n\ncoordinate table at snapshot: {}".format(size - len(data))
+    print("---------------------------------------")
 
     pp.pprint(current_run)
 
